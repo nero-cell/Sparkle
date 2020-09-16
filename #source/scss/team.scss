@@ -1,0 +1,92 @@
+.team {
+    padding: 80px 0;
+}
+
+.team__members {
+    @include flexbox;
+    justify-content: space-between;
+}
+
+.team__member {
+    box-shadow: 0 0 10px rgba(37, 39, 42, 0.1);
+    max-width: 270px;
+}
+
+.member__img {
+    position: relative;
+    height: 350px;
+    width: 100%;
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 65px;
+        background: #ffe500;
+        opacity: 0.7;
+    }
+}
+
+.image1 {
+    background: url(../img/team/pexels-creation-hill-1681010.jpg) 50% 50%/cover no-repeat;
+}
+
+.image2 {
+    background: url(../img/team/pexels-andrea-piacquadio-774909.jpg) 50% 50%/cover no-repeat;
+}
+
+.image3 {
+    background: url(../img/team/pexels-pixabay-220453.jpg) 50% 50%/cover no-repeat;
+}
+
+.image4 {
+    background: url(../img/team/pexels-mentatdgt-936313.jpg) 50% 50%/cover no-repeat;
+}
+
+.member__name {
+    @include cnt;
+    @include font(15px, #1b1b1b, $fontf1);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 0;
+    font-weight: 500;
+    letter-spacing: 6px;
+}
+
+.member__info {
+    @include font(12px, #707070, $fontf1);
+    padding: 25px 30px 35px 30px;
+    text-align: center;
+    line-height: 24px;
+}
+
+
+@media (max-width: 1170px) {
+    .team__members {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .team__member {
+        margin: 15px;
+        max-width: 100%;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .team__members {
+        display: block;
+    }
+
+    .team__member {
+        margin-bottom: 35px;
+    }
+
+    .team__member:last-child {
+        margin-bottom: 0;
+    }
+}

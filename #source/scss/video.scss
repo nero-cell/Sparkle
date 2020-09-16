@@ -1,0 +1,49 @@
+.video__wrapper {
+    @include cnt;
+    position: relative;
+    width: 100%;
+    height: 380px;
+    background: url(../img/video/city.jpg) 50% 50%/cover no-repeat;
+    background-attachment: fixed;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: 0.9;
+        z-index: 1;
+    }
+}
+
+.video__button {
+    @include font(15px, #ffe600, $fontf1);
+    cursor: pointer;
+    margin: 0 auto;
+    padding: 30px 40px;
+    text-transform: uppercase;
+    letter-spacing: 12px;
+    border: 1px solid #ffe600;
+    z-index: 2;
+    transition: .3s;
+    &:hover {
+        color: #c7b61c;
+        border: 1px solid #c7b61c;
+    }
+}
+
+
+
+@media (max-width: 787px) {
+    .video {
+        height: 190px;
+    }
+    
+    .video__button {
+        @include font(13px, #ffe600, $fontf1);
+        padding: 15px 20px;
+        letter-spacing: 6px;
+    }
+}

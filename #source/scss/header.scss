@@ -1,0 +1,177 @@
+.header {
+    background: url(../img/home/body.jpg) 50% 50%/cover no-repeat;
+    background-attachment: fixed;
+}
+
+.header__top {
+    @include flexbox();
+    align-items: center;
+    padding: 0 10px;
+    padding-top: 20px;
+    justify-content: space-between;
+}
+
+.header__menu {
+    position: relative;
+    transition: 1s;
+}
+
+.header__burger {
+    cursor: pointer;
+    padding: 5px;
+    width: 44px;
+    height: 36px;
+    .burger__wrapper {
+        @include flexbox;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        height: 100%;
+    }
+
+    span {
+        transition: .7s;
+        height: 4px;
+        border-radius: 5px;
+        background: #ffe500;
+    }
+
+    &.active {
+        background: #ffe500;
+    }
+
+    &.active span {
+        background: #000;
+    }
+
+    .span1 {
+        width: 100%;
+    }
+
+    &.active .span1 {
+        @include rotate(135deg);
+        position: relative;
+        top: 11px;
+    }
+
+    .span2 {
+        transition: .3s;
+        width: 80%;
+    }
+
+    &.active .span2 {
+        @include scale(0);
+    }
+
+    .span3 {
+        transition: .5s;
+        width: 60%;
+    }
+
+    &.active .span3 {
+        @include rotate(-135deg);
+        width: 100%;
+        position: relative;
+        bottom: 11px;
+    }
+
+    &:hover span,
+    &.full span {
+        width: 100%;
+    }
+}
+
+.header__links {
+    position: absolute;
+    display: none;
+    top: 36px;
+    right: -100%;
+    width: 200px;
+    height: 250px;
+    padding: 30px 20px;
+    background: #ffe500;
+    overflow: auto;
+    &.active {
+        display: block;
+        right: 0;
+    }
+
+    .header__link {
+        @include font(18px, #000, $fontf3);
+        display: block;
+        padding: 5px;
+        &:hover {
+            background: #000;
+            color: #ffe500;
+        }
+    }
+}
+
+.header__bottom {
+    @include cnt;
+    padding: 285px 0;
+}
+
+.header__title {
+    @include font(20px, #ffffff, $fontf1);
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    letter-spacing: 16px;
+}
+
+.header__text {
+    @include font(13px, #ffffff, $fontf1);
+    margin-bottom: 50px;
+    letter-spacing: 5.2px;
+}
+
+.header__button {
+    @include cnt;
+    transition: .3s;
+    width: 170px;
+    height: 45px;
+    margin: 0 auto;
+    background: #ffe500;
+    &:hover {
+        opacity: 0.8;
+    }
+
+    span {
+        @include font(10px, #000, $fontf1);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }
+}
+
+
+
+
+
+
+
+@media(max-width: 878px) {
+    .header__title {
+        font-size: 16px;
+        letter-spacing: 5px;
+    }
+
+    .header__text {
+        font-size: 13px;
+        letter-spacing: 2.2px;
+    }
+}
+
+
+
+
+
+@media(max-width: 475px) {
+    .header__title {
+        line-height: 30px;
+    }
+
+    .header__text {
+        line-height: 20px;
+    }
+}

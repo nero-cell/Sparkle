@@ -1,0 +1,151 @@
+.tech {
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        left: 0;
+        height: 5px;
+        background-color: #ffe500;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        right: 0;
+        height: 5px;
+        background-color: #e2e2e2;
+    }
+}
+
+.item-bottom__tech1 {
+    &::before {
+        content: '';
+        width: 95%;
+    }
+    &::after {
+        content: '';
+        width: 5%;
+    }
+}
+
+.item-bottom__tech2 {
+    &::before {
+        content: '';
+        width: 95%;
+    }
+    &::after {
+        content: '';
+        width: 5%;
+    }
+}
+
+.item-bottom__tech3 {
+    &::before {
+        content: '';
+        width: 90%;
+    }
+    &::after {
+        content: '';
+        width: 10%;
+    }
+}
+
+.item-bottom__tech4 {
+    &::before {
+        content: '';
+        width: 100%;
+    }
+    &::after {
+        content: '';
+        width: 0;
+    }
+}
+
+.item-bottom__tech5 {
+    &::before {
+        content: '';
+        width: 98%;
+    }
+    &::after {
+        content: '';
+        width: 2%;
+    }
+}
+
+.item-bottom__tech6 {
+    &::before {
+        content: '';
+        width: 80%;
+    }
+    &::after {
+        content: '';
+        width: 20%;
+    }
+}
+
+.item-bottom__tech7 {
+    &::before {
+        content: '';
+        width: 99%;
+    }
+    &::after {
+        content: '';
+        width: 1%;
+    }
+}
+
+.item-bottom__tech8 {
+    &::before {
+        content: '';
+        width: 99%;
+    }
+    &::after {
+        content: '';
+        width: 1%;
+    }
+}
+
+.item-bottom__tech9 {
+    &::before {
+        content: '';
+        width: 85%;
+    }
+    &::after {
+        content: '';
+        width: 15%;
+    }
+}
+
+.item-bottom__tech10 {
+    &::before {
+        content: '';
+        width: 80%;
+    }
+    &::after {
+        content: '';
+        width: 20%;
+    }
+}
+
+.item-bottom__tech11 {
+    &::before {
+        content: '';
+        width: 70%;
+    }
+    &::after {
+        content: '';
+        width: 30%;
+    }
+}
+
+.item-bottom__tech12 {
+    &::before {
+        content: '';
+        width: 75%;
+    }
+    &::after {
+        content: '';
+        width: 25%;
+    }
+}

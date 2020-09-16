@@ -1,0 +1,174 @@
+.footer {
+    padding: 80px 0 60px 0;
+    background: #000;
+    .container {
+        @include flexbox;
+        justify-content: space-between;
+    }
+}
+
+.footer__sparkle {
+    max-width: 320px;
+    .footer__text {
+        margin-bottom: 50px;
+    }
+}
+
+.footer__logo {
+    margin: 0 0 30px 15px;
+}
+
+.footer__links {
+    max-width: 200px;
+    width: 100%;
+    a {
+        @include font(12px, #ffffff, $fontf1);
+        display: block;
+        margin-bottom: 25px;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    a:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.footer__about-us {
+    max-width: 200px;
+    width: 100%;
+    a {
+        @include font(12px, #ffffff, $fontf1);
+        display: block;
+        margin-bottom: 25px;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    a:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.footer__contact-us {
+    max-width: 375px;
+    .footer__text {
+        margin-bottom: 35px;
+    }
+}
+
+.footer__title {
+    @include font(15px, #ffffff, $fontf1);
+    margin-bottom: 25px;
+    letter-spacing: 0.75px;
+}
+
+.footer__text {
+    @include font(12px, #ffffff, $fontf1);
+    line-height: 24px;
+    letter-spacing: 0.6px;
+}
+
+.footer__year {
+    @include font(12px, #ffffff, $fontf1);
+    letter-spacing: 0.6px;
+}
+
+.footer__mail {
+    @include cnt;
+    width: 371px;
+    height: 45px;
+    background: #ffe500;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    &:hover {
+        background: #c7b300;
+    }
+
+    span {
+        @include font(13px, #1b1b1b, $fontf3);
+    }
+}
+
+.footer__socials {
+    @include flexbox;
+}
+
+.footer__social {
+    margin-right: 10px;
+}
+
+
+
+@media (max-width: 1150px) {
+    .footer__links {
+        max-width: 160px;
+    }
+    
+    .footer__about-us {
+        max-width: 160px;
+    }
+
+    .footer__contact-us {
+        max-width: 320px;
+    }
+
+    .footer__mail {
+        width: 310px;
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .footer {
+        .container {
+            display: grid;
+            grid-template-areas: "links contact-us"  
+                                 "about-us sparkle";
+            grid-template-columns: 1fr 1fr;
+        }
+    } 
+
+    .footer__sparkle {
+        grid-area: sparkle;
+    }
+    
+    .footer__links {
+        margin-bottom: 40px;
+        grid-area: links; 
+    }
+
+    .footer__about-us {
+        grid-area: about-us; 
+    }
+    
+    .footer__contact-us {
+        margin-bottom: 40px;
+        grid-area: contact-us;
+    }
+
+    .footer__logo {
+        margin: 0 0 30px 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer {
+        .container {
+            grid-template-areas: "contact-us contact-us"  
+                                 "links about-us"
+                                 "sparkle sparkle";
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .footer__about-us {
+        margin-bottom: 40px;
+    }
+
+    .footer__mail {
+        width: 270px;
+    }
+}

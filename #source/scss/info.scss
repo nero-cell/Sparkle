@@ -1,0 +1,32 @@
+.info {
+    padding: 165px 0 220px 0;
+}
+
+.info__img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 90px;
+}
+
+.info__text {
+    @include font(15px, #707070, $fontf1);
+    margin: 0 auto;
+    text-align: center;
+    max-width: 600px;
+    line-height: 32px;
+}
+
+
+
+
+
+
+@media(max-width: 550px) {
+    .info {
+        padding: 100px 0;
+    }
+    
+    .info__img {
+        margin-bottom: 50px;
+    }
+}
