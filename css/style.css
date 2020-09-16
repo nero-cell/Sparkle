@@ -780,7 +780,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .portfolio__image {
   max-width: 350px;
-  width: 100%;
+  width: 16.666%;
 }
 
 .portfolio__button {
